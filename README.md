@@ -13,9 +13,9 @@ This repository contains the UI/UX design for the **Smart911 Dashboard**—an in
 - CSS
 - JavaScript
 
-This is a **UI/UX prototype** and not a fully functional system. It is intended to demonstrate how the **Smart911 Dashboard** can look and behave before integration with backend systems.
+> **Note**: This project is a **work in progress**. The prototype is not yet complete and is intended to demonstrate the UI/UX design. Backend functionality, data integrations, and real-time features are yet to be implemented.
 
-Feel free to clone and explore the dashboard!
+Feel free to clone and explore the current state of the dashboard!
 
 ## Installation:
 1. Clone the repository:

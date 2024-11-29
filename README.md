@@ -1,33 +1,23 @@
-# Smart911 Dashboard
+# Smart911 Dashboard UI/UX Prototype
 
-## Overview
-The **Smart911 Dashboard** is a cutting-edge interface designed to streamline emergency response operations. It leverages modern web technologies to create a responsive, interactive, and visually intuitive system for dispatchers and first responders. This dashboard serves as the frontend prototype for the **Smart911: Intelligent Emergency Response System**.
+This repository contains the UI/UX design for the **Smart911 Dashboard**—an interactive prototype for an AI-powered emergency response system. The dashboard is built using HTML, CSS, and JavaScript to simulate how emergency dispatchers can manage incidents, allocate resources, and monitor real-time data for improved decision-making.
 
-## Key Features
-- **Top Navigation Bar:**
-  - Tabs for `Incident Overview`, `Resources`, `Analytics`, and `Hospital Communication`.
-- **Interactive GIS Map:**
-  - Displays emergency locations with live updates and color-coded severity markers.
-  - Real-time tracking of emergency vehicles (e.g., ambulances, fire trucks).
-- **Incident List:**
-  - A sortable and filterable list of incidents.
-  - Includes severity scores, urgency levels, and recommended actions.
-- **Resource Status Panel:**
-  - Displays the availability and status of emergency units in real-time.
-- **Predictive Analytics Section:**
-  - Visualized forecasts for injury severity, response times, and resource allocation.
-  - Includes KPIs such as average response time and active incidents.
-- **Responsive Design:**
-  - Optimized for desktop, tablet, and mobile views to ensure usability in any environment.
+## Key Features:
+- **Incident List**: Displays real-time incidents with severity and location.
+- **Interactive GIS Map**: Tracks emergency resources and incident locations.
+- **Resource Cards**: Shows availability and status of emergency units.
+- **Predictive Analytics (Placeholder)**: Simulated data visualizations for response times and injury forecasts.
 
-## Installation and Usage
-Follow these steps to run the dashboard locally:
+## Technologies Used:
+- HTML
+- CSS
+- JavaScript
 
-### Prerequisites:
-- A modern web browser (e.g., Chrome, Firefox, Edge).
-- Optionally, a local HTTP server for optimal performance (e.g., [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VS Code).
+This is a **UI/UX prototype** and not a fully functional system. It is intended to demonstrate how the **Smart911 Dashboard** can look and behave before integration with backend systems.
 
-### Steps:
-1. **Clone this repository:**
+Feel free to clone and explore the dashboard!
+
+## Installation:
+1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Smart911-Dashboard.git
+   git clone https://github.com/<your-username>/smart911-dashboard-ui.git

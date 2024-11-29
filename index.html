@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart911 Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <h1>Smart911 Dashboard</h1>
+        <ul>
+          <li><a href="#overview">Incident Overview</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#analytics">Analytics</a></li>
+          <li><a href="#hospital">Hospital Communication</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Interactive Map and Incident List -->
+      <section id="overview" class="dashboard-section">
+        <div class="map-container">
+          <h2>Interactive Map</h2>
+          <div id="map">[Map Placeholder]</div>
+        </div>
+        <div class="incident-list">
+          <h2>Incident List</h2>
+          <ul id="incidents">
+            <!-- Incident items dynamically added -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- Resource Status -->
+      <section id="resources" class="dashboard-section">
+        <h2>Resource Status</h2>
+        <div class="resource-cards">
+          <div class="resource-card" data-resource="ambulance">
+            <h3>Ambulance</h3>
+            <p><span id="ambulance-count">3</span> Available</p>
+          </div>
+          <div class="resource-card" data-resource="fire-truck">
+            <h3>Fire Trucks</h3>
+            <p><span id="fire-truck-count">2</span> Available</p>
+          </div>
+          <div class="resource-card" data-resource="police">
+            <h3>Police Cars</h3>
+            <p><span id="police-count">4</span> Available</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Predictive Analytics -->
+      <section id="analytics" class="dashboard-section">
+        <h2>Predictive Analytics</h2>
+        <div class="analytics-graphs">
+          <div class="graph" id="response-time">[Response Time Graph]</div>
+          <div class="graph" id="severity-forecast">
+            [Injury Severity Graph]
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2024 Smart911. All rights reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

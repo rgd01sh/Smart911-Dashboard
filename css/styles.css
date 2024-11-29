@@ -1,0 +1,69 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+header {
+  background: #1f3b4d;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+header .top-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+header .top-nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.dashboard-section {
+  padding: 2rem;
+  margin: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-container {
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.incident-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resource-cards {
+  display: flex;
+  gap: 1rem;
+}
+
+.resource-card {
+  background: #eaf7ff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.analytics-graphs {
+  display: flex;
+  gap: 1rem;
+}
+
+.graph {
+  background: #f0f8ff;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1;
+  text-align: center;
+}

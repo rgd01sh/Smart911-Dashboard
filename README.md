@@ -20,4 +20,4 @@ Feel free to clone and explore the current state of the dashboard!
 ## Installation:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<rgd01sh>/smart911-dashboard-ui.git
+   git clone https://github.com/rgd01sh/smart911-dashboard-ui.git

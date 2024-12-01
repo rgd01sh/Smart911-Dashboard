@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Smart911 Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-gauge"></script>
+    <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
+    <script src="https://unpkg.com/chartjs-gauge@0.3.0/dist/chartjs-gauge.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Sidebar -->
+      <aside class="app-left">
+        <div class="app-logo">
+          <img src="assets/logo.png" alt="Smart911 Logo" />
+          <span>Smart911 Dashboard</span>
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-list-item active" data-tab="overview">
+              <a href="#">Active Incidents</a>
+            </li>
+            <li class="nav-list-item" data-tab="resources">
+              <a href="#">Resource Management</a>
+            </li>
+            <li class="nav-list-item" data-tab="history">
+              <a href="#">Incident History</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="app-main">
+        <!-- Active Incidents Section -->
+        <section id="overview" class="tab-section active">
+          <header class="main-header-line">
+            <h1>Active Incidents in Yanbu</h1>
+            <input
+              type="text"
+              placeholder="Search incidents..."
+              id="search-input"
+            />
+          </header>
+
+          <!-- GIS Map -->
+          <div id="map" class="map"></div>
+
+          <!-- Charts -->
+          <div class="chart-row">
+            <div class="chart-container-wrapper">
+              <div class="chart-title">Incident Priorities</div>
+              <canvas id="incident-priority-chart"></canvas>
+            </div>
+            <div class="chart-container-wrapper">
+              <div class="chart-title">Resource Availability</div>
+              <canvas id="resource-availability-chart"></canvas>
+            </div>
+          </div>
+
+          <div class="ai-risk-panel">
+            <h2>AI Risk Analysis</h2>
+            <!-- Gauge Chart -->
+            <div
+              id="canvas-holder"
+              style="width: 100%; max-width: 400px; margin: auto"
+            >
+              <canvas id="gauge-chart"></canvas>
+            </div>
+            <button id="update-gauge" style="margin-top: 20px">
+              Update Risk Score
+            </button>
+          </div>
+
+          <!-- Incident Table -->
+          <div class="incident-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Priority</th>
+                  <th>Type</th>
+                  <th>Location</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="incident-table">
+                <!-- Incident rows will be dynamically added here -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Resource Management Section -->
+        <section id="resources" class="tab-section">
+          <h1>Manage Resources in Yanbu</h1>
+          <!-- Resource Allocation Form -->
+          <div class="resource-availability">
+            <h2>Allocate Resources</h2>
+            <div class="resource-allocation-form">
+              <label for="resource-type">Resource Type:</label>
+              <select id="resource-type">
+                <!-- Dynamically populated with resource types -->
+              </select>
+
+              <label for="incident-location">Incident Location:</label>
+              <select id="incident-location">
+                <!-- Dynamically populated with incident locations -->
+              </select>
+
+              <button id="allocate-resource-button">Allocate Resource</button>
+            </div>
+          </div>
+
+          <!-- Allocation Status Message -->
+          <div id="allocation-message" style="margin-top: 20px"></div>
+
+          <!-- Progress Bar Container -->
+          <div id="progress-container" style="display: none; margin-top: 20px">
+            <progress
+              id="progress-bar"
+              value="0"
+              max="100"
+              style="width: 100%; height: 30px"
+            ></progress>
+            <p>Allocating resource...</p>
+          </div>
+
+          <!-- Resource Summary -->
+          <div class="resource-summary" id="allocation-summary"></div>
+        </section>
+
+        <!-- Incident History Section -->
+        <section id="history" class="tab-section">
+          <h1>Incident History in Yanbu</h1>
+          <div class="history-search">
+            <label for="history-search-input">Search History:</label>
+            <input
+              type="text"
+              id="history-search-input"
+              placeholder="Search by type or location..."
+            />
+          </div>
+          <div class="incident-history-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Priority</th>
+                  <th>Type</th>
+                  <th>Location</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="history-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <!-- Right Sidebar -->
+      <aside class="app-right">
+        <h2>Resource Tracker</h2>
+        <ul id="resource-list"></ul>
+      </aside>
+    </div>
+  </body>
+</html>
